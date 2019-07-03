@@ -69,7 +69,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -159,6 +159,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201907031513014_InitialCreate.cs" />
+    <Compile Include="Migrations\201907031513014_InitialCreate.Designer.cs">
+      <DependentUpon>201907031513014_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\NativeModels\BusRoutes.cs" />
     <Compile Include="Models\NativeModels\Route.cs" />
@@ -193,6 +197,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Resource Include="Themes\MetroDark\HowToApplyTheme.txt" />
+    <EmbeddedResource Include="Migrations\201907031513014_InitialCreate.resx">
+      <DependentUpon>201907031513014_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
