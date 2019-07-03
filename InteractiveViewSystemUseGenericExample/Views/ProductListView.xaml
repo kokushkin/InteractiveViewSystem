@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="InteractiveViewSystemUseGenericExample.Views.ProductListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:BaseViews="clr-namespace:InteractiveViewSystem.BaseViews;assembly=InteractiveViewSystem"
+             xmlns:Views="clr-namespace:InteractiveViewSystemUseGenericExample.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="382.5" d:DesignWidth="667.5">
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView ItemsSource="{Binding ItemsVM}" SelectedValue="{Binding SelectedItem}"  x:Name="List">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Views:ProductView DataContext="{Binding DataViewModel}"></Views:ProductView>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <BaseViews:ListPanelView Grid.Row="1"></BaseViews:ListPanelView>
+        </Grid>
+        <Views:InteractiveProductDetailView DataContext="{Binding CurrentVM}" Grid.Column="1"></Views:InteractiveProductDetailView>
+    </Grid>
+</UserControl>

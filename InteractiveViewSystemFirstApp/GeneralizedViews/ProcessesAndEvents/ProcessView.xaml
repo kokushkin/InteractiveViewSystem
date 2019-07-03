@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="InteractiveViewSystem.GeneralizedViews.ProcessesAndEvents.ProcessView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ProcessesAndEvents="clr-namespace:InteractiveViewSystem.GeneralizedViews.ProcessesAndEvents"
+             xmlns:BaseViews="clr-namespace:InteractiveViewSystem.BaseViews"
+             mc:Ignorable="d" d:DesignWidth="341.31" d:DesignHeight="325.534">
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ProcessesAndEvents:DetailProcessFieldsView DataContext="{Binding}"></ProcessesAndEvents:DetailProcessFieldsView>
+            <ListBox  VerticalAlignment="Stretch" Grid.Row="1" ItemsSource="{Binding Events.ItemsVM}" SelectedValue="{Binding Events.SelectedItem}"  x:Name="List">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ProcessesAndEvents:EventView DataContext="{Binding DataViewModel}"></ProcessesAndEvents:EventView>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <BaseViews:ListPanelView DataContext="{Binding Events}" Grid.Row="2"></BaseViews:ListPanelView>
+        </Grid>
+    </Border>
+</UserControl>

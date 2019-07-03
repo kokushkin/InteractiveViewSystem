@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="InteractiveViewSystem.BaseViews.ListPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"               
+             xmlns:ProcessesAndEvents="clr-namespace:InteractiveViewSystem.GeneralizedViews.ProcessesAndEvents"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Command="{Binding AddItemCommand}">AddItem</Button>
+            <Button Command="{Binding DeleteItemCommand}" CommandParameter="{Binding SelectedItem}">DeleteItem</Button>
+            <Button Command="{Binding SaveListCommand}">SaveList</Button>
+            <Button Command="{Binding EditListCommand}">EditList</Button>
+            <Button Command="{Binding UpdateListCommand}">UpdateList</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="InteractiveViewSystemUseGenericExample.Views.InteractiveShopDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:BaseViews="clr-namespace:InteractiveViewSystem.BaseViews;assembly=InteractiveViewSystem"
+             xmlns:Views="clr-namespace:InteractiveViewSystemUseGenericExample.Views"
+             mc:Ignorable="d" d:DesignWidth="1045.071" d:DesignHeight="425.984">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Views:ShopDetailView DataContext="{Binding}"></Views:ShopDetailView>
+        <BaseViews:DateilItemPanelView Grid.Row="1" DataContext="{Binding}"></BaseViews:DateilItemPanelView>
+    </Grid>
+</UserControl>

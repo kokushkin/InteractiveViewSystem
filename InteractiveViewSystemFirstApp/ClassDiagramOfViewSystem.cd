@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InteractiveViewSystem.GeneralizedViewModels.ProcessesAndEvents.DetailEventViewModel">
+    <Position X="4.75" Y="1.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AERCAMAAQAAgQAAAAgAAAQQCBAAAAAgCAACAAAEEgAA=</HashCode>
+      <FileName>GeneralizedViewModels\ProcessesAndEvents\DetailEventViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_model" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="InteractiveViewSystem.GeneralizedViewModels.ProcessesAndEvents.EventViewModel">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAgAAAQQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GeneralizedViewModels\ProcessesAndEvents\EventViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_model" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="InteractiveViewSystem.GeneralizedViewModels.ProcessesAndEvents.ProcessViewModel">
+    <Position X="0.5" Y="4" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAEACQQAmAkAJQBwIAQAQQoAAAACACAAaAAAEEAAA=</HashCode>
+      <FileName>GeneralizedViewModels\ProcessesAndEvents\ProcessViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_model" />
+      <Field Name="currentVM" />
+      <Property Name="CurrentVM" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EventsVM" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="InteractiveViewSystem.GeneralizedModels.ProcessesAndEvents.EventModel">
+    <Position X="11" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQCAJAAAAAgAAAAAEAACAQAAAAAAAAAQAAAAAAAAQA=</HashCode>
+      <FileName>GeneralizedModels\ProcessesAndEvents\EventModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="InteractiveViewSystem.GeneralizedModels.ProcessesAndEvents.ProcessModel">
+    <Position X="8.75" Y="6.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQCIAAAAAAoAABAAAAACAQAAAAAAAIAQAQAAAAACAA=</HashCode>
+      <FileName>GeneralizedModels\ProcessesAndEvents\ProcessModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="events" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="InteractiveViewSystem.GeneralizedModels.ProcessesAndEvents.IEventModel">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAIAAAAAgAAAAAAAAAAQAAAAAAAAAQAAAAAAAAQA=</HashCode>
+      <FileName>GeneralizedModels\ProcessesAndEvents\IEventModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="InteractiveViewSystem.GeneralizedModels.ProcessesAndEvents.IProcessModel">
+    <Position X="4.75" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCIAAAAAAoAABAAAAAAAQAAAAAAAAAQAQAAAAACAA=</HashCode>
+      <FileName>GeneralizedModels\ProcessesAndEvents\IProcessModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

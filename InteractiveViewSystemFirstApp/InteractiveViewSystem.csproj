@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10B03F07-12AC-4903-9A92-9084F4B42510}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InteractiveViewSystem</RootNamespace>
+    <AssemblyName>InteractiveViewSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.4.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BaseViews\DateilItemPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BaseViews\ListPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralizedViews\ProcessesAndEvents\DetailEventView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralizedViews\ProcessesAndEvents\DetailProcessFieldsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralizedViews\ProcessesAndEvents\EventView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralizedViews\ProcessesAndEvents\InteractiveDetailEventView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralizedViews\ProcessesAndEvents\InteractiveDetailProcessFieldsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralizedViews\ProcessesAndEvents\ProcessView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="BaseCommands\ItemCommands\EditItemCommand.cs" />
+    <Compile Include="BaseCommands\ItemCommands\SaveItemCommand.cs" />
+    <Compile Include="BaseCommands\ItemCommands\UpdateItemCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\AddItemCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\DeleteItemCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\EditListCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\ListCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\SaveListCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\SelectItemCommand.cs" />
+    <Compile Include="BaseCommands\ListCommands\UpdateListCommand.cs" />
+    <Compile Include="BaseCreators\IGeneralCreator.cs" />
+    <Compile Include="BaseCreators\SepareteCreators\IDataDetailViewModelCreator.cs" />
+    <Compile Include="BaseCreators\SepareteCreators\IDataViewModelCreator.cs" />
+    <Compile Include="BaseCreators\SepareteCreators\IItemModelAdapterCreator.cs" />
+    <Compile Include="BaseCreators\SepareteCreators\IViewModelCreator.cs" />
+    <Compile Include="BaseModels\IListModel.cs" />
+    <Compile Include="BaseModels\ItemModelAdapters\IItemModelAdapter.cs" />
+    <Compile Include="BaseModels\ItemModelAdapters\ItemModelAdapterEventArgs.cs" />
+    <Compile Include="BaseModels\ItemModelAdapters\ItemModelAdapterForPassive.cs" />
+    <Compile Include="BaseModels\ListModel.cs" />
+    <Compile Include="BaseModels\ListModelEventArgs.cs" />
+    <Compile Include="BaseViewModels\DetailItemViewModel.cs" />
+    <Compile Include="BaseModels\IItemDataModel.cs" />
+    <Compile Include="BaseModels\IItemModel.cs" />
+    <Compile Include="BaseModels\ItemModel.cs" />
+    <Compile Include="BaseModels\ItemModelEventArgs.cs" />
+    <Compile Include="BaseViewModels\DetailItemViewModelTimer.cs" />
+    <Compile Include="BaseViewModels\IDetailItemViewModel.cs" />
+    <Compile Include="BaseViewModels\IItemDataViewModel.cs" />
+    <Compile Include="BaseViewModels\IItemViewModel.cs" />
+    <Compile Include="BaseViewModels\IListViewModel.cs" />
+    <Compile Include="BaseViewModels\ItemViewModel.cs" />
+    <Compile Include="BaseViewModels\ListViewModel.cs" />
+    <Compile Include="BaseViewModels\ListViewModelWithTimer.cs" />
+    <Compile Include="BaseViews\DateilItemPanelView.xaml.cs">
+      <DependentUpon>DateilItemPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaseViews\ListPanelView.xaml.cs">
+      <DependentUpon>ListPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedCreaters\ProcessesAndEvents\SepareteCreators\EventDataDetailViewModelCreator.cs" />
+    <Compile Include="GeneralizedCreaters\ProcessesAndEvents\SepareteCreators\EventDataViewModelCreator.cs" />
+    <Compile Include="GeneralizedCreaters\ProcessesAndEvents\SepareteCreators\EventModelAdapterCreator.cs" />
+    <Compile Include="GeneralizedCreaters\ProcessesAndEvents\SepareteCreators\EventViewModelCreator.cs" />
+    <Compile Include="GeneralizedModels\ProcessesAndEvents\EventModel.cs" />
+    <Compile Include="GeneralizedModels\ProcessesAndEvents\IEventModel.cs" />
+    <Compile Include="GeneralizedModels\ProcessesAndEvents\IProcessModel.cs" />
+    <Compile Include="GeneralizedViewModels\Notifier.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\ChangeStatus.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\DetailEventViewModel.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\EventViewModel.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\IDetailEventViewModel.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\IEventViewModel.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\IProcessViewModel.cs" />
+    <Compile Include="GeneralizedViewModels\ProcessesAndEvents\ProcessViewModel.cs" />
+    <Compile Include="GeneralizedViews\ProcessesAndEvents\DetailEventView.xaml.cs">
+      <DependentUpon>DetailEventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedViews\ProcessesAndEvents\DetailProcessFieldsView.xaml.cs">
+      <DependentUpon>DetailProcessFieldsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedViews\ProcessesAndEvents\EventView.xaml.cs">
+      <DependentUpon>EventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedViews\ProcessesAndEvents\InteractiveDetailEventView.xaml.cs">
+      <DependentUpon>InteractiveDetailEventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedViews\ProcessesAndEvents\InteractiveDetailProcessFieldsView.xaml.cs">
+      <DependentUpon>InteractiveDetailProcessFieldsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedViews\ProcessesAndEvents\ProcessView.xaml.cs">
+      <DependentUpon>ProcessView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="ClassDiagramOfViewSystem.cd" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

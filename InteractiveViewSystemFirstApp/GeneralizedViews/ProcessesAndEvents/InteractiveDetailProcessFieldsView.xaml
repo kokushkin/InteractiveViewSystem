@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="InteractiveViewSystem.GeneralizedViews.ProcessesAndEvents.InteractiveDetailProcessFieldsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:BaseViews="clr-namespace:InteractiveViewSystem.BaseViews"
+             xmlns:ProcessesAndEventsViews="clr-namespace:InteractiveViewSystem.GeneralizedViews.ProcessesAndEvents"
+             mc:Ignorable="d" >
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ProcessesAndEventsViews:DetailProcessFieldsView DataContext="{Binding}"></ProcessesAndEventsViews:DetailProcessFieldsView>
+            <BaseViews:DateilItemPanelView Grid.Row="1" DataContext="{Binding}"></BaseViews:DateilItemPanelView>
+        </Grid>
+    </Border>
+
+</UserControl>

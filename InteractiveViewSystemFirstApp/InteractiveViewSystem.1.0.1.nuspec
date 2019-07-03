@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>InteractiveViewSystem</id>
+        <version>1.0.1</version>
+        <authors>Nikolaz Wright</authors>
+        <owners>Nikolaz Wright</owners>
+        <iconUrl>http://wow-show.ru/uploads/tv.jpg</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Some help for GUI. Not support backward compatibility!</description>
+        <copyright>Nikolaz Wright © 2017</copyright>
+        <dependencies>
+            <dependency id="NLog" version="4.4.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\InteractiveViewSystem.dll" target="lib\net45\InteractiveViewSystem.dll" />
+        <file src="bin\Release\InteractiveViewSystem.pdb" target="lib\net45\InteractiveViewSystem.pdb" />
+    </files>
+</package>
