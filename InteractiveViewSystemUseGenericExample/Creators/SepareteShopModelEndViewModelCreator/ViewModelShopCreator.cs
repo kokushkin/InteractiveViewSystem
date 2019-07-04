@@ -14,9 +14,14 @@ namespace InteractiveViewSystemUseGenericExample.Creators.SepareteShopModelEndVi
     class ViewModelShopCreator :
         IViewModelCreator<ShopModel, ShopViewModel, ShopDetailViewModel>
     {
+        private static DetailItemViewModelTimer<ShopModel, ShopDetailViewModel> _previosDetailViewModel;
         public IDetailItemViewModel<ShopModel, ShopDetailViewModel> CreateDetailViewModel(IItemModelAdapter<ShopModel> model)
         {
-            return new DetailItemViewModelTimer<ShopModel, ShopDetailViewModel>(model, new ShopDataDetailViewModelCreator(), new ShopModelAdapterCreator());
+            if (_previosDetailViewModel != null)
+                _previosDetailViewModel.Dispose();
+
+            _previosDetailViewModel = new DetailItemViewModelTimer<ShopModel, ShopDetailViewModel>(model, new ShopDataDetailViewModelCreator(), new ShopModelAdapterCreator());
+            return _previosDetailViewModel;
         }
 
         public IItemViewModel<ShopModel, ShopViewModel> CreateItemViewModel(IItemModelAdapter<ShopModel> itemModel)

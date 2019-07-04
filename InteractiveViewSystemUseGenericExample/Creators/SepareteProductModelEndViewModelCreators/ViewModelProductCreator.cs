@@ -14,9 +14,14 @@ namespace InteractiveViewSystemUseGenericExample.Creators.SepareteProductModelEn
     public class ViewModelProductCreator :
         IViewModelCreator<ProductModel, ProductViewModel, ProductDetailViewModel>
     {
+        private static DetailItemViewModelTimer<ProductModel, ProductDetailViewModel> _previosDetailViewModel;
         public IDetailItemViewModel<ProductModel, ProductDetailViewModel> CreateDetailViewModel(IItemModelAdapter<ProductModel> model)
         {
-            return new DetailItemViewModelTimer<ProductModel, ProductDetailViewModel>(model, new ProductDataDetailViewModelCreator(), new ProductModelAdapterCreator());
+            if(_previosDetailViewModel != null)
+                _previosDetailViewModel.Dispose();
+
+            _previosDetailViewModel = new DetailItemViewModelTimer<ProductModel, ProductDetailViewModel>(model, new ProductDataDetailViewModelCreator(), new ProductModelAdapterCreator());
+            return _previosDetailViewModel;
         }
 
         public IItemViewModel<ProductModel, ProductViewModel> CreateItemViewModel(IItemModelAdapter<ProductModel> itemModel)

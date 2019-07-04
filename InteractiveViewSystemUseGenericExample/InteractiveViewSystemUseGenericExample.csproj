@@ -79,6 +79,8 @@
     <Compile Include="Creators\SepareteShopModelEndViewModelCreator\ShopModelAdapterCreator.cs" />
     <Compile Include="Creators\SepareteShopModelEndViewModelCreator\ViewModelShopCreator.cs" />
     <Compile Include="Models\ShopModel.cs" />
+    <Compile Include="ViewModels\DetailItemViewModelTimer.cs" />
+    <Compile Include="ViewModels\ListViewModelWithTimer.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
     <Compile Include="ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="ViewModels\ShopDetailViewModel.cs" />

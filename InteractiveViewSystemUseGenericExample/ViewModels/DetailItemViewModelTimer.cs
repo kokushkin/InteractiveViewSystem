@@ -1,15 +1,12 @@
-﻿using InteractiveViewSystem.BaseCreators.SepareteCreators;
+﻿using System;
+using InteractiveViewSystem.BaseCreators.SepareteCreators;
 using InteractiveViewSystem.BaseModels.ItemModelAdapters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using InteractiveViewSystem.BaseViewModels;
 
-namespace InteractiveViewSystem.BaseViewModels
+namespace InteractiveViewSystemUseGenericExample.ViewModels
 {
     public class DetailItemViewModelTimer<DataModelType, DataDetailViewModelType> : 
-        DetailItemViewModel<DataModelType, DataDetailViewModelType>
+        DetailItemViewModel<DataModelType, DataDetailViewModelType>, IDisposable
         where DataDetailViewModelType : IItemDataViewModel
     {
         System.Windows.Threading.DispatcherTimer timer;
@@ -28,6 +25,11 @@ namespace InteractiveViewSystem.BaseViewModels
         private void Timer_Tick(object sender, EventArgs e)
         {
             Update();
+        }
+
+        public void Dispose()
+        {
+            timer.Tick -= Timer_Tick;
         }
     }
 }

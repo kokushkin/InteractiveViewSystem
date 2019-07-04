@@ -1,12 +1,9 @@
-﻿using InteractiveViewSystem.BaseCreators.SepareteCreators;
+﻿using System;
+using InteractiveViewSystem.BaseCreators.SepareteCreators;
 using InteractiveViewSystem.BaseModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using InteractiveViewSystem.BaseViewModels;
 
-namespace InteractiveViewSystem.BaseViewModels
+namespace InteractiveViewSystemUseGenericExample.ViewModels
 {
     public class ListViewModelWithTimer<DataModelType, DataViewModelType, DataDetailViewModelType> :
         ListViewModel<DataModelType, DataViewModelType, DataDetailViewModelType>

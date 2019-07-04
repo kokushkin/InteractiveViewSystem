@@ -116,14 +116,12 @@
     <Compile Include="BaseModels\IItemModel.cs" />
     <Compile Include="BaseModels\ItemModel.cs" />
     <Compile Include="BaseModels\ItemModelEventArgs.cs" />
-    <Compile Include="BaseViewModels\DetailItemViewModelTimer.cs" />
     <Compile Include="BaseViewModels\IDetailItemViewModel.cs" />
     <Compile Include="BaseViewModels\IItemDataViewModel.cs" />
     <Compile Include="BaseViewModels\IItemViewModel.cs" />
     <Compile Include="BaseViewModels\IListViewModel.cs" />
     <Compile Include="BaseViewModels\ItemViewModel.cs" />
     <Compile Include="BaseViewModels\ListViewModel.cs" />
-    <Compile Include="BaseViewModels\ListViewModelWithTimer.cs" />
     <Compile Include="BaseViews\DateilItemPanelView.xaml.cs">
       <DependentUpon>DateilItemPanelView.xaml</DependentUpon>
     </Compile>
