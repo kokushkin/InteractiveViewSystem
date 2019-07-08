@@ -8,8 +8,11 @@ Even if it homemade, the project was used in several "real" products, more or le
 The project was started nearly 3 years ago, but it's not possible to move all history in here (by now). It was developing very quickly in the first year but then was almost abandoned for several years (partly because my interests were shifted to web development), but now I think it’s worth to publish it anyway.
 
 Again, the project was created with the understanding that there are many  others mature projects in this fields like MVVM Light etc., but the main goal was to try to write something considerable by myself and at the same time simple and that could be useful in my day to day work.
-Also, have to notice that many project artifacts written by russian language, but I'm definitely gonna change it in a short time.
+Also, have to notice that many project artifacts written by russian language, but I'm definitely gonna change it.
 I hope you'll enjoy this;)
+
+# Install
+You can install from nuget package InteractiveViewSystem (https://www.nuget.org/packages/InteractiveViewSystem/ )
 
 # UsageExamples
 To start up with framework I'd definitely recommend to look at Usage Examples. Here is steps to set up.
@@ -34,7 +37,7 @@ Don't forget to commit this string //StotageUtils.GenerateTestDataAndSave(); bac
 ## DeliveryExample
 This is the project that show up how to communicate with remote service.
 go to /UsageExamples/Delivery/DeliveryExample
-Unfortunately it doesn't work now (I have to restore server part). I'm going to fix it in short time.
+Unfortunately it doesn't work now (I have to restore server part). I'm going to fix it.
 
 
 
