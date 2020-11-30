@@ -1,5 +1,5 @@
 # InteractiveViewSystem
-A UI framework coupled with the WPF framework created like experimental project to facilitate CRUD operations.
+A UI framework coupled with the WPF framework created like an experimental project to facilitate CRUD operations.
 
 # Description
 The project was created as homemade project inspired by a book "Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development (3rd Edition), Craig Larman". So, project was created and passed 3 iterations  in strict accordance to this book. The main idea to reduce borden of creating interfaces for CRUD operations  that can help concentrate on your business logic. Although, in strict accordance with  MVVM principles, you can vary your view representations very freely.
